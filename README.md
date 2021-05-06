@@ -2,8 +2,10 @@
 
 Większość hostingów preinstaluje silniki, jednak może nadejść moment, gdy musisz wgrać własny. I co wtedy?
 
+
+Musimy stworzyć miejsce w którym będzie znajdował się nasz serwer MC. Wpisujemy komendę `cd /home/` oraz `mkdir <nazwa_folderu>`
 Aby zainstalować silnik, najpierw należy go pobrać.
-Dla przykładu PaperMC, pobieramy go ze strony papermc.io/downloads. Ja pobiorę Build #
+Dla przykładu PaperMC, pobieramy go ze strony papermc.io/downloads. Ja pobiorę Build #645. W tym celu wpisuję komendę `wget https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/645/downloads/paper-1.16.5-645.jar`
 Następnie tworzymy folder, w którym ma znajdować się nasz serwer i przenosimy do niego plik silnika serwera.
 Zmieniamy nazwę silnika serwera na jakąś prostą, pamiętajmy jednak, że musimy zachować format .jar, np. server.jar
 Jeżeli jesteśmy na VPS/Dedyku musimy najpierw zainstalować Javę oraz aplikację `screen`. Jeżeli już ją masz pomiń ten krok.
