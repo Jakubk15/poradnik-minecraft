@@ -1,4 +1,4 @@
-:tools:  **| OPTYMALIZACJE**
+🛠️  **| OPTYMALIZACJE**
 
 Support Team zaleca zapoznanie się z tym poradnikiem odnośnie optymalizacji:
 *https://github.com/YouHaveTrouble/minecraft-optimization*
@@ -22,6 +22,11 @@ GuardSpigot (Silnik zabezpieczający Spigota)
 
 
 
+----------------------------------------------
+
+
+
+
 :robot:  **| OCHRONA ANTI-BOT**
 
 Support Team zaleca następujące zabezpieczenia Anti-Bot:
@@ -34,6 +39,12 @@ Support Team zaleca następujące zabezpieczenia Anti-Bot:
 
 EyfenCord (Bungee, pełni też funkcję AntiCrash)
 BotSentry (Bungee, bardzo intuicyjny, z zaawansowanym podglądem na ataki i zarządzaniem)
+
+
+
+
+----------------------------------------------
+
 
 
 
@@ -56,6 +67,12 @@ Velocity - Ulepszony fork Bungeecorda pod względem wydajności oraz bezpieczeń
 
 
 
+
+----------------------------------------------
+
+
+
+
 :speech_balloon: ** | CHAT**
 
 Aby skonfigurować chat, potrzebujesz pluginu Vault, pluginu z permisjami (np. LuckPerms) oraz pluginu EssentialsXChat wraz z EssentialsX.
@@ -63,6 +80,12 @@ Aby zmienić format chatu, musimy wejść w config.yml EssentialsX i poszukać s
 nadawać formaty czatu dla rang. Pamiętajmy, aby stworzyć grupę oraz nadać ją sobie w celu sprawdzenia!
 `(/lp creategroup <nazwa>, /lp user <nick> parent add <ranga>)`
 W razie dodatkowych pytań skontaktuj się z Support Teamem. 
+
+
+
+
+----------------------------------------------
+
 
 
 :crown: **| PERMISJE**
@@ -75,6 +98,12 @@ Aby dodać/usunąć permisje dla danej rangi, należy użyć następujących kom
 
 W przypadku pluginu PermissionsEx zamiast `permission set/unset` należy wpisać po prostu `add/remove`
 W razie dodatkowych pytań skontaktuj się z Support Teamem.
+
+
+
+
+
+----------------------------------------------
 
 
 
