@@ -1,3 +1,7 @@
+Poniżej znajduje się dokumentacja przeznaczona na Discord z Tworzenia Serwerów.
+
+
+
 💻 **| INSTALACJA SILNIKA**
 
 Większość hostingów preinstaluje silniki, jednak może nadejść moment, gdy musisz wgrać własny. I co wtedy?
