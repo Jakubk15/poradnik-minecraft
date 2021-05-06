@@ -1,6 +1,8 @@
 Poniżej znajduje się dokumentacja przeznaczona na Discord z Tworzenia Serwerów.
 
 Playlista z tworzenia serwerów: https://www.youtube.com/playlist?list=PL_BBuK-pXvpXsYuKQg3JMghpAHg2td5WL
+
+
 Playlista z tworzenia serwerów PLUS: https://www.youtube.com/playlist?list=PL_BBuK-pXvpUzafMeyIOwj1ppaHY3LkQZ
 
 
