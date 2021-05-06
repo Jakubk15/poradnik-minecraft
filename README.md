@@ -153,6 +153,8 @@ Aby dodać/usunąć permisje dla danej rangi, należy użyć następujących kom
 W przypadku pluginu PermissionsEx zamiast `permission set/unset` należy wpisać po prostu `add/remove`
 W razie dodatkowych pytań skontaktuj się z Support Teamem.
 
+Więcej informacji o pluginie LuckPerms znajdziecie pod: https://luckperms.net/wiki/Home
+
 
 
 
