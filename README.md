@@ -11,13 +11,17 @@ Support Team zaleca następujące zabezpieczenia Anti-Crash:
 :white_check_mark:  **| DARMOWE**
 
 EpicGuard (Spigot)
+
 ExploitFixer (Spigot)
+
 SafeMC-AntiCrash-Free (Spigot)
 
 :moneybag:  **| PŁATNE**
 
 SafeMC Premium (Spigot)
+
 EyfenCord (Bungee)
+
 GuardSpigot (Silnik zabezpieczający Spigota)
 
 
@@ -38,6 +42,7 @@ Support Team zaleca następujące zabezpieczenia Anti-Bot:
 **:moneybag:  | PŁATNE**
 
 EyfenCord (Bungee, pełni też funkcję AntiCrash)
+
 BotSentry (Bungee, bardzo intuicyjny, z zaawansowanym podglądem na ataki i zarządzaniem)
 
 
@@ -56,9 +61,13 @@ Support Team, w celu uzyskania najlepszej wydajności oraz bezpieczeństwa serwe
 Silniki na serwery główne:
 
 PaperMC - Fork Spigota w celu poprawienia bezpieczeństwa oraz wydajności. // https://papermc.io/downloads (rekomendowany na wszystkie wersje)
+
 Tuinity - Fork Papera w celu uzyskania lepszej wydajności. // https://github.com/Spottedleaf/Tuinity (rekomendowany na wyższe wersje)
+
 Airplane - Fork Tuinity w celu uzyskania jeszcze lepszej wydajności. // https://dl.airplane.gg (rekomendowany na wyższe wersje)
+
 **Purpur - Fork Airplane mający na celu umożliwieniu administratorom serwera swobodnej i prostej konfiguracji.** // https://purpur.pl3x.net (rekomendowany na wyższe wersje)
+
 💰 GuardSpigot - fork Spigota mający na celu dodatkowe zabezpieczenia przed crashami. (rekomendowany na niższe wersje, lub jeżeli posiadasz na serwerze multiwersję)
 
 Silniki na serwery Proxy:
