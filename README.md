@@ -1,3 +1,33 @@
+💻 **| INSTALACJA SILNIKA**
+
+Większość hostingów preinstaluje silniki, jednak może nadejść moment, gdy musisz wgrać własny. I co wtedy?
+
+Aby zainstalować silnik, najpierw należy go pobrać.
+Dla przykładu PaperMC, pobieramy go ze strony papermc.io/downloads. Ja pobiorę Build #
+Następnie tworzymy folder, w którym ma znajdować się nasz serwer i przenosimy do niego plik silnika serwera.
+Zmieniamy nazwę silnika serwera na jakąś prostą, pamiętajmy jednak, że musimy zachować format .jar, np. server.jar
+Jeżeli jesteśmy na VPS/Dedyku musimy najpierw zainstalować Javę oraz aplikację `screen`. Jeżeli już ją masz pomiń ten krok.
+Wpisujemy komendy:
+`apt-get install openjdk-11-jre`
+`apt-get install screen`
+`java -version`
+Jeżeli wyświetli nam się komunikat informujący o obecności Javy, to już prawie gotowe.
+Musimy teraz stworzyć plik uruchamiający serwer. W przypadku Linuxa będzie to start.sh
+
+Wpisujemy tam następujący kod:
+screen -dmS java -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar server.jar nogui
+
+I zapisujemy plik jako start.sh w folderze z serwerem.
+Teraz wpisujemy komendę:
+`chmod +x server.jar`
+oraz
+`./start.sh`
+
+Teraz powinna nam się ukazać konsola serwera. Jeżeli to nie nastąpi, wpisujemy `screen -ls`. Teraz wyświetli nam się lista naszych screenów wraz z ich nazwami. Następnie wpisujemy:
+`screen -S "<nazwa_screena>"`
+
+W razie dodatkowych pytań skontaktuj się z supportem
+
 :hammer_and_wrench:  **| OPTYMALIZACJE**
 
 Support Team zaleca zapoznanie się z tym poradnikiem odnośnie optymalizacji:
