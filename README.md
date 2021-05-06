@@ -4,7 +4,7 @@ Support Team zaleca zapoznanie się z tym poradnikiem odnośnie optymalizacji:
 *https://github.com/YouHaveTrouble/minecraft-optimization*
 
 
-:shield: ** | OCHRONA ANTYCRASH**
+:shield: **| OCHRONA ANTYCRASH**
 
 Support Team zaleca następujące zabezpieczenia Anti-Crash:
 
