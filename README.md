@@ -68,7 +68,7 @@ Airplane - Fork Tuinity w celu uzyskania jeszcze lepszej wydajności. // https:/
 
 **Purpur - Fork Airplane mający na celu umożliwieniu administratorom serwera swobodnej i prostej konfiguracji.** // https://purpur.pl3x.net (rekomendowany na wyższe wersje)
 
-💰 GuardSpigot - fork Spigota mający na celu dodatkowe zabezpieczenia przed crashami. (rekomendowany na niższe wersje, lub jeżeli posiadasz na serwerze multiwersję)
+💰  GuardSpigot - fork Spigota mający na celu dodatkowe zabezpieczenia przed crashami. (rekomendowany na niższe wersje, lub jeżeli posiadasz na serwerze multiwersję)
 
 Silniki na serwery Proxy:
 Waterfall - Ulepszony fork Bungeecorda pod wieloma względami
