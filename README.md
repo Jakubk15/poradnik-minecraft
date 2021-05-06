@@ -1,10 +1,10 @@
-🛠️  **| OPTYMALIZACJE**
+🛠️  ** | OPTYMALIZACJE**
 
 Support Team zaleca zapoznanie się z tym poradnikiem odnośnie optymalizacji:
 *https://github.com/YouHaveTrouble/minecraft-optimization*
 
 
-:shield: **| OCHRONA ANTYCRASH**
+:shield: ** | OCHRONA ANTYCRASH**
 
 Support Team zaleca następujące zabezpieczenia Anti-Crash:
 
@@ -31,7 +31,7 @@ GuardSpigot (Silnik zabezpieczający Spigota)
 
 
 
-:robot:  **| OCHRONA ANTI-BOT**
+:robot:  ** | OCHRONA ANTI-BOT**
 
 Support Team zaleca następujące zabezpieczenia Anti-Bot:
 
@@ -54,7 +54,7 @@ BotSentry (Bungee, bardzo intuicyjny, z zaawansowanym podglądem na ataki i zarz
 
 
 
-:robot: **| Silniki**
+:robot: ** | Silniki**
 
 Support Team, w celu uzyskania najlepszej wydajności oraz bezpieczeństwa serwera, zaleca użycie następujących silników:
 
@@ -97,7 +97,7 @@ W razie dodatkowych pytań skontaktuj się z Support Teamem.
 
 
 
-:crown: **| PERMISJE**
+:crown: ** | PERMISJE**
 
 Aby dodać/usunąć permisje dla danej rangi, należy użyć następujących komend (plugin LuckPerms):
 
@@ -118,12 +118,12 @@ W razie dodatkowych pytań skontaktuj się z Support Teamem.
 
 
 
-:earth_africa:  **| SPAWN**
+:earth_africa:  ** | SPAWN**
 
 Aby ustawić spawn, potrzebujesz pluginu EssentialsX z dodatkiem EssentialsXSpawn. Możesz go pobrać tutaj: https://essentialsx.net
 Następnie, stajemy w miejscu w którym chcemy ustawić spawn i wpisujemy /setspawn <ranga> / *
 
-:lock: **| ZABEZPIECZANIE SPAWNU**
+:lock: ** | ZABEZPIECZANIE SPAWNU**
 
 W tym celu potrzebujesz pluginów WorldEdit oraz WorldGuard.
 Wpisujemy komendę `//wand` i zaznaczamy teren. Następnie patrzymy się w dół i wpisujemy komendę `//expand 100 100`
