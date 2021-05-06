@@ -166,7 +166,7 @@ W razie dodatkowych pytań skontaktuj się z Support Teamem.
 :earth_africa:  **| SPAWN**
 
 Aby ustawić spawn, potrzebujesz pluginu EssentialsX z dodatkiem EssentialsXSpawn. Możesz go pobrać tutaj: https://essentialsx.net
-Następnie, stajemy w miejscu w którym chcemy ustawić spawn i wpisujemy /setspawn <ranga> / *
+Następnie, stajemy w miejscu w którym chcemy ustawić spawn i wpisujemy /setspawn [ranga] / *
 
 :lock: **| ZABEZPIECZANIE SPAWNU**
 
