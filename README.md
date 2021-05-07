@@ -165,6 +165,8 @@ Airplane - Fork Tuinity w celu uzyskania jeszcze lepszej wydajności. // https:/
 
 Silniki na serwery Proxy:
 Waterfall - Ulepszony fork Bungeecorda pod wieloma względami
+
+
 Velocity - Ulepszony fork Bungeecorda pod względem wydajności oraz bezpieczeństwa.
 
 
