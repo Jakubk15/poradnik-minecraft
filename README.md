@@ -31,7 +31,7 @@ oraz
 
 
 Aby zainstalować silnik, najpierw należy go pobrać.
-Dla przykładu [PaperMC](papermc.io), pobieramy go ze strony https://papermc.io/downloads. Ja pobiorę Build #645. W tym celu wpisuję komendę:
+Dla przykładu [PaperMC](https://papermc.io), pobieramy go ze strony https://papermc.io/downloads. Ja pobiorę Build #645. W tym celu wpisuję komendę:
 
 `wget https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/645/downloads/paper-1.16.5-645.jar`
 
@@ -161,21 +161,21 @@ Support Team, w celu uzyskania najlepszej wydajności oraz bezpieczeństwa serwe
 
 Silniki na serwery główne:
 
-[PaperMC](papermc.io/downloads) - Fork Spigota w celu poprawienia bezpieczeństwa oraz wydajności. (rekomendowany na wszystkie wersje)
+[PaperMC](https://papermc.io/downloads) - Fork Spigota w celu poprawienia bezpieczeństwa oraz wydajności. (rekomendowany na wszystkie wersje)
 
 [Tuinity](https://github.com/Spottedleaf/Tuinity) - Fork Papera w celu uzyskania lepszej wydajności. rekomendowany na wyższe wersje)
 
 [Airplane](https://dl.airplane.gg) - Fork Tuinity w celu uzyskania jeszcze lepszej wydajności. (rekomendowany na wyższe wersje)
 
-**[Purpur](purpur.pl3x.net) - Fork Airplane mający na celu umożliwieniu administratorom serwera swobodnej i prostej konfiguracji.** (rekomendowany na wyższe wersje)
+**[Purpur](https://purpur.pl3x.net) - Fork Airplane mający na celu umożliwieniu administratorom serwera swobodnej i prostej konfiguracji.** (rekomendowany na wyższe wersje)
 
 💰  [GuardSpigot](https://www.mc-market.org/resources/14497) - fork Spigota mający na celu dodatkowe zabezpieczenia przed crashami. (rekomendowany na niższe wersje, lub jeżeli posiadasz na serwerze multiwersję)
 
 Silniki na serwery Proxy:
-[Waterfall](papermc.io/downloads#Waterfall) - Ulepszony fork Bungeecorda pod wieloma względami
+[Waterfall](https://papermc.io/downloads#Waterfall) - Ulepszony fork Bungeecorda pod wieloma względami
 
 
-[Velocity](velocitypowered.com) - Ulepszony fork Bungeecorda pod względem wydajności oraz bezpieczeństwa.
+[Velocity](https://velocitypowered.com) - Ulepszony fork Bungeecorda pod względem wydajności oraz bezpieczeństwa.
 
 
 
