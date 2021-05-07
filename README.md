@@ -1,4 +1,4 @@
-Poniżej znajduje się dokumentacja przeznaczona na Discord z Tworzenia Serwerów.
+Poniżej znajduje się dokumentacja przeznaczona na [Discord z Tworzenia Serwerów.](https://discord.gg/RXkXWh6p4K)
 
 Playlista z tworzenia serwerów: https://www.youtube.com/playlist?list=PL_BBuK-pXvpXsYuKQg3JMghpAHg2td5WL
 
@@ -31,7 +31,7 @@ oraz
 
 
 Aby zainstalować silnik, najpierw należy go pobrać.
-Dla przykładu PaperMC, pobieramy go ze strony papermc.io/downloads. Ja pobiorę Build #645. W tym celu wpisuję komendę:
+Dla przykładu [PaperMC](papermc.io), pobieramy go ze strony https://papermc.io/downloads. Ja pobiorę Build #645. W tym celu wpisuję komendę:
 
 `wget https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/645/downloads/paper-1.16.5-645.jar`
 
@@ -161,21 +161,21 @@ Support Team, w celu uzyskania najlepszej wydajności oraz bezpieczeństwa serwe
 
 Silniki na serwery główne:
 
-PaperMC - Fork Spigota w celu poprawienia bezpieczeństwa oraz wydajności. // https://papermc.io/downloads (rekomendowany na wszystkie wersje)
+[PaperMC](papermc.io/downloads) - Fork Spigota w celu poprawienia bezpieczeństwa oraz wydajności. (rekomendowany na wszystkie wersje)
 
-Tuinity - Fork Papera w celu uzyskania lepszej wydajności. // https://github.com/Spottedleaf/Tuinity (rekomendowany na wyższe wersje)
+[Tuinity](https://github.com/Spottedleaf/Tuinity) - Fork Papera w celu uzyskania lepszej wydajności. rekomendowany na wyższe wersje)
 
-Airplane - Fork Tuinity w celu uzyskania jeszcze lepszej wydajności. // https://dl.airplane.gg (rekomendowany na wyższe wersje)
+[Airplane](https://dl.airplane.gg) - Fork Tuinity w celu uzyskania jeszcze lepszej wydajności. (rekomendowany na wyższe wersje)
 
-**Purpur - Fork Airplane mający na celu umożliwieniu administratorom serwera swobodnej i prostej konfiguracji.** // https://purpur.pl3x.net (rekomendowany na wyższe wersje)
+**[Purpur](purpur.pl3x.net) - Fork Airplane mający na celu umożliwieniu administratorom serwera swobodnej i prostej konfiguracji.** (rekomendowany na wyższe wersje)
 
-💰  GuardSpigot - fork Spigota mający na celu dodatkowe zabezpieczenia przed crashami. (rekomendowany na niższe wersje, lub jeżeli posiadasz na serwerze multiwersję)
+💰  [GuardSpigot](https://www.mc-market.org/resources/14497) - fork Spigota mający na celu dodatkowe zabezpieczenia przed crashami. (rekomendowany na niższe wersje, lub jeżeli posiadasz na serwerze multiwersję)
 
 Silniki na serwery Proxy:
-Waterfall - Ulepszony fork Bungeecorda pod wieloma względami
+[Waterfall](papermc.io/downloads#Waterfall) - Ulepszony fork Bungeecorda pod wieloma względami
 
 
-Velocity - Ulepszony fork Bungeecorda pod względem wydajności oraz bezpieczeństwa.
+[Velocity](velocitypowered.com) - Ulepszony fork Bungeecorda pod względem wydajności oraz bezpieczeństwa.
 
 
 
@@ -187,7 +187,7 @@ Velocity - Ulepszony fork Bungeecorda pod względem wydajności oraz bezpieczeń
 
 5. Konfiguracja Chatu, prefixów.
 
-Aby skonfigurować chat, potrzebujesz pluginu Vault, pluginu z permisjami (np. LuckPerms) oraz pluginu EssentialsXChat wraz z EssentialsX.
+Aby skonfigurować chat, potrzebujesz pluginu Vault, pluginu z permisjami (np. [LuckPerms](https://luckperms.net) oraz pluginu EssentialsXChat wraz z [EssentialsX](https://essentialsx.net).
 Aby zmienić format chatu, musimy wejść w config.yml EssentialsX i poszukać sekcji odpowiadającej za chat. Mamy tam wartość `group-formats`, w której możemy
 nadawać formaty czatu dla rang. Pamiętajmy, aby stworzyć grupę oraz nadać ją sobie w celu sprawdzenia!
 `(/lp creategroup <nazwa>, /lp user <nick> parent add <ranga>)`
@@ -231,7 +231,7 @@ Następnie, stajemy w miejscu w którym chcemy ustawić spawn i wpisujemy /setsp
 7.1 Zabezpieczanie spawnu
 
 
-W tym celu potrzebujesz pluginów WorldEdit oraz WorldGuard.
+W tym celu potrzebujesz pluginów [WorldEdit](https://dev.bukkit.org/projects/worldedit) oraz [WorldGuard](https://dev.bukkit.org/projects/worldguard).
 Wpisujemy komendę `//wand` i zaznaczamy teren. Następnie patrzymy się w dół i wpisujemy komendę `//expand 100 100`
 Potem zostało nam tylko zdefiniowanie regionu komendą `/rg define <nazwa_regionu>`
 Nasz region jest już zabezpieczony, jednak z pewnością chcielibyśmy modyfikować jego ustawienia, wystarczy wpisać komendę `/rg flags <region>` i wyświetli nam się interaktywna wiadomość na czacie, w której możemy ustawiać tzw. flagi dla naszego regionu.
