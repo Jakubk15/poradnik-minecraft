@@ -56,6 +56,14 @@ Wpisujemy komendy:
 Jeżeli wyświetli nam się komunikat informujący o obecności Javy, to już prawie gotowe.
 Musimy teraz stworzyć plik uruchamiający serwer. W przypadku Linuxa będzie to start.sh
 
+`touch start.sh`
+
+`nano start.sh`
+
+**Jeżeli po wpisaniu powyższej komendy nie ujrzysz edytora tekstowego nano, musisz go zainstalować! Wpisz komendę:**
+
+`apt-get install nano`
+
 Wpisujemy tam następujący kod:
 
 
@@ -227,3 +235,117 @@ W tym celu potrzebujesz pluginów WorldEdit oraz WorldGuard.
 Wpisujemy komendę `//wand` i zaznaczamy teren. Następnie patrzymy się w dół i wpisujemy komendę `//expand 100 100`
 Potem zostało nam tylko zdefiniowanie regionu komendą `/rg define <nazwa_regionu>`
 Nasz region jest już zabezpieczony, jednak z pewnością chcielibyśmy modyfikować jego ustawienia, wystarczy wpisać komendę `/rg flags <region>` i wyświetli nam się interaktywna wiadomość na czacie, w której możemy ustawiać tzw. flagi dla naszego regionu.
+
+
+8. BungeeCord
+
+8.1 Omówienie.
+
+BungeeCord to tzw. proxy, które pozwala nam na szybkie przełączanie się pomiędzy serwerami. Można to wykorzystać np. do zrobienia wielu trybów na serwerze.
+
+8.2 Instalacja BungeeCorda.
+
+Jako silnika proxy użyjemy [Velocity](https://velocitypowered.com/downloads). Jest to jeden z najlepszych darmowych silników proxy, który jest w stanie zapewnić nam wysoki poziom wydajności oraz bezpieczeństwa. 
+
+Tworzymy nowy folder, przeznaczony na serwer Proxy. 
+
+`cd /home/`
+
+`mkdir bungeecord`
+
+Teraz pobieramy nasz silnik do stworzonego wcześniej folderu.
+
+`wget https://versions.velocitypowered.com/download/1.1.5.jar`
+
+Zmieniamy nazwę pliku na bardziej przyjazną, np. `velocity.jar`
+
+8.3 Utworzenie skryptu startowego
+
+W przypadku proxy skrypt wygląda identycznie jak w przypadku innych silników. Po prostu tworzymy plik, np. bungeecord.sh
+
+`touch bungeecord.sh`
+
+`nano start.sh`
+
+Wpisujemy poniższy kod:
+
+```
+screen -dmS java -Xms512M -Xmx512M -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar velocity.jar nogui
+```
+
+I zapisujemy skrótem `CTRL+X`, następnie klikamy `ENTER`.
+
+Następnie odpalamy bungeecorda poprzez wpisanie komendy ./bungeecord.sh (lub inną, zależy od nazwy waszego pliku)
+
+Dajemy teraz Velocity czas na przygotowanie wszystkich plików, następnie wyłączamy serwer komendą `stop` lub `end` o ile się nie mylę.
+
+8.4 Konfiguracja 
+
+Jeżeli wolisz poradniki w formie filmu lub bardziej rozwiniętej dokumentacji, zapraszam do [tego](https://www.youtube.com/watch?v=frwNn1eVQtg) poradniku lub na [oficjalną wiki SpigotMC](https://www.spigotmc.org/wiki/bungeecord-configuration-guide/)
+
+
+Otwieramy plik `config.yml`
+
+Interesować będą nas tylko wartości:
+
+`permissions` - miejsce w którym dodajemy permisje dla rang w BungeeCord. Domyślnie stworzone rangi to default oraz admin.
+
+`query-port` - port naszego serwera Bungee. Domyślnie jest on ustawiony na 25577, jednak jeżeli masz inny serwer na tej samej maszynie pod tym portem, zmień to.
+
+`host` - zostawiamy tą wartość na `0.0.0.0`, jednak port (cyfry po dwukropku) zmieniamy na taki sam jak w `query-port`
+
+`player_limit` - liczba slotów serwera. Więcej graczy niż ustawiona wartość nie wejdzie. Jeżeli chcemy wyłączyć, wpisujemy `-1`
+
+`motd` - wiadomość na liście serwerów MultiPlayer oraz query. Możemy używać [formatowania tekstu](https://htmlcolorcodes.com/minecraft-color-codes/) ze znakiem `&`
+
+`max_players` - liczba slotów serwera wyświetlana na MOTD serwera bungee. Może się różnić od wartości `player_limit`
+
+`online-mode` - taka sama funkcja jak w przypadku standardowych serwerów Spigot. Jeżeli jest to włączone, tylko gracze premium mogą wejść na serwer.
+
+`priorities` - priorytet w wejściu na serwery podrzędne. Powiedzmy że mamy serwery Lobby oraz Survival. Po wejściu chcemy być przekierowani na Lobby, więc wpisujemy:
+
+
+```
+priorities:
+- lobby
+- survival
+```
+
+Takie ustawienie sprawi, że gdy serwer Lobby padnie z jakiejkolwiek przyczyny (np. z powodu crashu), BungeeCord przekierowuje graczy bezpośrednio na serwer Survival.
+
+`servers` - najważniejsza część w konfiguracji. Dzieli się ona na zakładki:
+
+```
+nazwa_serwera:
+  address: mojserwer.pl
+  restricted: false
+  motd: '&5Moje MOTD serwera`
+```
+
+Przypuśćmy, że chcę dodać serwer Lobby. W tej sytuacji wpisuję:
+
+```
+lobby:
+  address: 127.0.0.1:25565 #Adres numeryczny mojego serwera Lobby. Jeżeli jest on na tej samej maszynie, możemy wpisać 127.0.0.1:PORT, lub localhost:PORT
+  restricted: false #Tutaj ustawiamy, czy serwer ma być dla osób ze specjalnymi uprawnieniami. Jeżeli tak, ustawiamy wartość na true
+  motd: '&5Moje MOTD serwera` #Tutaj wpisujemy MOTD serwera podrzędnego. Na 99% ta funkcja nie będzie nas interesować, ponieważ na liście serwerów widzimy MOTD Bungee, a nie MOTD Serwera podrzędnego.
+  ```
+  
+  
+
+8.5 Konfiguracja Spigota
+
+
+To jeszcze nie wszystko. W naszym serwerze podrzędnym musimy jeszcze zmienić parę rzeczy.
+
+Przechodzimy do katalogu serwera podrzędnego np. `cd/home/minecraft`, w zależności od ustawionej nazwy folderu.
+
+Przechodzimy do pliku `spigot.yml`
+
+Ustawiamy wartość `bungeecord` na `true`
+
+Zapisujemy i przechodzimy do pliku `server.properties`
+
+Ustawiamy wartość `online-mode` na false.
+
+Uruchamiamy serwer Spigot oraz serwer bungee, łączymy się z serwerem Bungee i... gotowe!!! Powinniśmy być w tym momencie na wybranym przez nas serwerze podrzędnym. Możemy się przełączyć na inny serwer (o ile taki dodaliśmy) komendą `/server`
