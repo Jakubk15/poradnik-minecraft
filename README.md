@@ -349,3 +349,23 @@ Zapisujemy i przechodzimy do pliku `server.properties`
 Ustawiamy wartość `online-mode` na false.
 
 Uruchamiamy serwer Spigot oraz serwer bungee, łączymy się z serwerem Bungee i... gotowe!!! Powinniśmy być w tym momencie na wybranym przez nas serwerze podrzędnym. Możemy się przełączyć na inny serwer (o ile taki dodaliśmy) komendą `/server`
+
+
+9. Certyfikat SSL.
+
+Certyfikat SSL to certyfikat nadawany przez odpowiednie urzędy, tzw. rooty, aby uruchomić połączenia HTTPS dla serwera dla domeny. Jednym z takich rootów, jest [LetsEncrypt](https://letsencrypt.org), który pozwala nam na nadanie takiego certyfikatu dla naszej domeny zupełnie za darmo, przy użyciu klienta ACME. Jednym z takich klientów jest [CertBot](https://certbot.eff.org), którego użyjemy.
+9.1 Instalacja CertBota
+Instrukcje dotyczące instalacji można znaleźć [tutaj](https://certbot.eff.org/instructions)
+Do instalacji wymagany jest tzw. shell access, czyli dostęp SSH do VPSA.
+W zależności od tego, jaki system posiadamy, instrukcje są podane na powyższej stronie. W pewnym momencie może wyskoczyć pole do wprowadzenia e-maila, wtedy go więc wpisujemy. Jeżeli podczas wpisania komendy `certbot --nginx` wyskoczy wam, że konfiguracja nieznaleziona, podajcie domenę oraz potem powinno wyskoczyć wam pole tekstowe, aby wpisać adres e-mail. 
+
+
+**UWAGA! Domena musi być podpięta do serwera WWW, który jest na waszym serwerze VPS, w celu weryfikacji domeny**
+
+9.2 Usuwanie certyfikatu
+
+Usuwanie certyfikatu jest proste.
+
+Wpisujemy komendę `certbot revoke --cert-name example.com`
+
+Aby przywrócić certyfikat ponownie, po prostu uruchamiamy CertBota ponownie.
