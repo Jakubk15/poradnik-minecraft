@@ -357,9 +357,11 @@ Certyfikat SSL to certyfikat nadawany przez odpowiednie urzędy, tzw. rooty, aby
 
 
 9.1 Instalacja CertBota
+
+
 Instrukcje dotyczące instalacji można znaleźć [tutaj](https://certbot.eff.org/instructions)
 Do instalacji wymagany jest tzw. shell access, czyli dostęp SSH do VPSA.
-W zależności od tego, jaki system posiadamy, instrukcje są podane na powyższej stronie. W pewnym momencie może wyskoczyć pole do wprowadzenia e-maila, wtedy go więc wpisujemy. Jeżeli podczas wpisania komendy `certbot --nginx` wyskoczy wam, że konfiguracja nieznaleziona, podajcie domenę oraz potem powinno wyskoczyć wam pole tekstowe, aby wpisać adres e-mail. 
+W zależności od tego, jaki system posiadamy, instrukcje są podane na powyższej stronie. W pewnym momencie może wyskoczyć pole do wprowadzenia e-maila, wtedy go więc wpisujemy. Jeżeli podczas wpisania komendy `certbot --nginx` lub `certbot --apache`, w zależności od oprogramowania wyskoczy wam, że konfiguracja nieznaleziona, podajcie domenę oraz potem powinno wyskoczyć wam pole tekstowe, aby wpisać adres e-mail. 
 
 
 **UWAGA! Domena musi być podpięta do serwera WWW, który jest na waszym serwerze VPS, w celu weryfikacji domeny**
