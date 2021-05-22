@@ -354,6 +354,8 @@ Uruchamiamy serwer Spigot oraz serwer bungee, łączymy się z serwerem Bungee i
 9. Certyfikat SSL.
 
 Certyfikat SSL to certyfikat nadawany przez odpowiednie urzędy, tzw. rooty, aby uruchomić połączenia HTTPS dla serwera dla domeny. Jednym z takich rootów, jest [LetsEncrypt](https://letsencrypt.org), który pozwala nam na nadanie takiego certyfikatu dla naszej domeny zupełnie za darmo, przy użyciu klienta ACME. Jednym z takich klientów jest [CertBot](https://certbot.eff.org), którego użyjemy.
+
+
 9.1 Instalacja CertBota
 Instrukcje dotyczące instalacji można znaleźć [tutaj](https://certbot.eff.org/instructions)
 Do instalacji wymagany jest tzw. shell access, czyli dostęp SSH do VPSA.
