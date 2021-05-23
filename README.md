@@ -270,12 +270,12 @@ W przypadku proxy skrypt wygląda identycznie jak w przypadku innych silników. 
 Wpisujemy poniższy kod:
 
 ```
-screen -dmS x java -Xms512M -Xmx512M -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar velocity.jar nogui
+screen -dmS s java -Xms512M -Xmx512M -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar velocity.jar nogui
 ```
 
 I zapisujemy skrótem `CTRL+X`, następnie klikamy `ENTER`.
 
-Następnie odpalamy bungeecorda poprzez wpisanie komendy ./bungeecord.sh (lub inną, zależy od nazwy waszego pliku)
+Następnie odpalamy bungeecorda poprzez wpisanie komendy `./bungeecord.sh`, `screen -r s` (lub inną, zależy od nazwy waszego pliku)
 
 Dajemy teraz Velocity czas na przygotowanie wszystkich plików, następnie wyłączamy serwer komendą `stop` lub `end` o ile się nie mylę.
 
