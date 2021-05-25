@@ -1,3 +1,6 @@
+# Poradnik Minecraft
+
+
 Poniżej znajduje się dokumentacja przeznaczona na [Discord z Tworzenia Serwerów.](https://discord.gg/RXkXWh6p4K)
 
 Playlista z tworzenia serwerów: https://www.youtube.com/playlist?list=PL_BBuK-pXvpXsYuKQg3JMghpAHg2td5WL
