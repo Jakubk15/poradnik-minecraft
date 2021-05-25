@@ -10,11 +10,11 @@ Playlista z tworzenia serwerów: https://www.youtube.com/playlist?list=PL_BBuK-p
 Playlista z tworzenia serwerów PLUS: https://www.youtube.com/playlist?list=PL_BBuK-pXvpUzafMeyIOwj1ppaHY3LkQZ
 
 
-**1. Podstawy**
+### 1. Podstawy
 
 
 
-1.1 Instalacja silnika gry oraz organizacja miejsca.
+#### 1.1 Instalacja silnika gry oraz organizacja miejsca.
 
 Większość hostingów preinstaluje silniki, jednak może nadejść moment, gdy musisz wgrać własny. I co wtedy?
 
@@ -83,7 +83,7 @@ I zapisujemy plik jako start.sh w folderze z serwerem.
 Teraz wpisujemy komendę:
 `chmod +x start.sh`
 
-1.2 Uruchamianie serwera.
+#### 1.2 Uruchamianie serwera.
 
 W tym celu wpisujemy komendę:
 
@@ -96,15 +96,15 @@ Teraz powinna nam się ukazać konsola serwera. Jeżeli to nie nastąpi, wpisuje
 
 W razie dodatkowych pytań skontaktuj się z supportem.
 
-2. Optymalizacja
+### 2. Optymalizacja
 
 Support Team zaleca zapoznanie się z tym poradnikiem odnośnie optymalizacji:
 *https://github.com/YouHaveTrouble/minecraft-optimization*
 
 
-3. Zabezpieczenia:
+### 3. Zabezpieczenia:
 
-3.1 Ochrona Anti-Crash
+#### 3.1 Ochrona Anti-Crash
 
 **UWAGA! Jeżeli masz serwer na wersji 1.16.x, to prawdopodobnie nie będziesz potrzebował zabezpieczenia typu Anti-Crash**
 
@@ -133,7 +133,7 @@ GuardSpigot (Silnik zabezpieczający Spigota)
 
 
 
-3.2 Ochrona Anti-Bot
+#### 3.2 Ochrona Anti-Bot
 
 Support Team zaleca następujące zabezpieczenia Anti-Bot:
 
@@ -156,7 +156,7 @@ BotSentry (Bungee, bardzo intuicyjny, z zaawansowanym podglądem na ataki i zarz
 
 
 
-4. Wybór silników i ich cechy.
+### 4. Wybór silników i ich cechy.
 
 
 
@@ -188,7 +188,7 @@ Silniki na serwery Proxy:
 
 
 
-5. Konfiguracja Chatu, prefixów.
+### 5. Konfiguracja Chatu, prefixów.
 
 Aby skonfigurować chat, potrzebujesz pluginu Vault, pluginu z permisjami (np. [LuckPerms](https://luckperms.net) oraz pluginu EssentialsXChat wraz z [EssentialsX](https://essentialsx.net).
 Aby zmienić format chatu, musimy wejść w config.yml EssentialsX i poszukać sekcji odpowiadającej za chat. Mamy tam wartość `group-formats`, w której możemy
@@ -203,7 +203,7 @@ W razie dodatkowych pytań skontaktuj się z Support Teamem.
 
 
 
-6. Permisje.
+### 6. Permisje.
 
 Aby dodać/usunąć permisje dla danej rangi, należy użyć następujących komend (plugin LuckPerms):
 
@@ -225,13 +225,13 @@ Więcej informacji o pluginie LuckPerms znajdziecie pod: https://luckperms.net/w
 
 
 
-7. Spawn
+### 7. Spawn
 
 Aby ustawić spawn, potrzebujesz pluginu EssentialsX z dodatkiem EssentialsXSpawn. Możesz go pobrać tutaj: https://essentialsx.net
 Następnie, stajemy w miejscu w którym chcemy ustawić spawn i wpisujemy /setspawn [ranga] / *
 
 
-7.1 Zabezpieczanie spawnu
+#### 7.1 Zabezpieczanie spawnu
 
 
 W tym celu potrzebujesz pluginów [WorldEdit](https://dev.bukkit.org/projects/worldedit) oraz [WorldGuard](https://dev.bukkit.org/projects/worldguard).
@@ -240,13 +240,13 @@ Potem zostało nam tylko zdefiniowanie regionu komendą `/rg define <nazwa_regio
 Nasz region jest już zabezpieczony, jednak z pewnością chcielibyśmy modyfikować jego ustawienia, wystarczy wpisać komendę `/rg flags <region>` i wyświetli nam się interaktywna wiadomość na czacie, w której możemy ustawiać tzw. flagi dla naszego regionu.
 
 
-8. BungeeCord
+### 8. BungeeCord
 
-8.1 Omówienie.
+#### 8.1 Omówienie.
 
 BungeeCord to tzw. proxy, które pozwala nam na szybkie przełączanie się pomiędzy serwerami. Można to wykorzystać np. do zrobienia wielu trybów na serwerze.
 
-8.2 Instalacja BungeeCorda.
+#### 8.2 Instalacja BungeeCorda.
 
 Jako silnika proxy użyjemy [Velocity](https://velocitypowered.com/downloads). Jest to jeden z najlepszych darmowych silników proxy, który jest w stanie zapewnić nam wysoki poziom wydajności oraz bezpieczeństwa. 
 
@@ -262,7 +262,7 @@ Teraz pobieramy nasz silnik do stworzonego wcześniej folderu.
 
 Zmieniamy nazwę pliku na bardziej przyjazną, np. `velocity.jar`
 
-8.3 Utworzenie skryptu startowego
+#### 8.3 Utworzenie skryptu startowego
 
 W przypadku proxy skrypt wygląda identycznie jak w przypadku innych silników. Po prostu tworzymy plik, np. bungeecord.sh
 
@@ -282,7 +282,7 @@ Następnie odpalamy bungeecorda poprzez wpisanie komendy `./bungeecord.sh`, `scr
 
 Dajemy teraz Velocity czas na przygotowanie wszystkich plików, następnie wyłączamy serwer komendą `stop` lub `end` o ile się nie mylę.
 
-8.4 Konfiguracja 
+#### 8.4 Konfiguracja 
 
 Jeżeli wolisz poradniki w formie filmu lub bardziej rozwiniętej dokumentacji, zapraszam do [tego](https://www.youtube.com/watch?v=frwNn1eVQtg) poradniku lub na [oficjalną wiki SpigotMC](https://www.spigotmc.org/wiki/bungeecord-configuration-guide/)
 
@@ -336,7 +336,7 @@ lobby:
   
   
 
-8.5 Konfiguracja Spigota
+#### 8.5 Konfiguracja Spigota
 
 
 To jeszcze nie wszystko. W naszym serwerze podrzędnym musimy jeszcze zmienić parę rzeczy.
@@ -354,12 +354,12 @@ Ustawiamy wartość `online-mode` na false.
 Uruchamiamy serwer Spigot oraz serwer bungee, łączymy się z serwerem Bungee i... gotowe!!! Powinniśmy być w tym momencie na wybranym przez nas serwerze podrzędnym. Możemy się przełączyć na inny serwer (o ile taki dodaliśmy) komendą `/server`
 
 
-9. Certyfikat SSL.
+### 9. Certyfikat SSL.
 
 Certyfikat SSL to certyfikat nadawany przez odpowiednie urzędy, tzw. rooty, aby uruchomić połączenia HTTPS dla serwera dla domeny. Jednym z takich rootów, jest [LetsEncrypt](https://letsencrypt.org), który pozwala nam na nadanie takiego certyfikatu dla naszej domeny zupełnie za darmo, przy użyciu klienta ACME. Jednym z takich klientów jest [CertBot](https://certbot.eff.org), którego użyjemy.
 
 
-9.1 Instalacja CertBota
+### 9.1 Instalacja CertBota
 
 
 Instrukcje dotyczące instalacji można znaleźć [tutaj](https://certbot.eff.org/instructions)
@@ -369,7 +369,7 @@ W zależności od tego, jaki system posiadamy, instrukcje są podane na powyższ
 
 **UWAGA! Domena musi być podpięta do serwera WWW, który jest na waszym serwerze VPS, w celu weryfikacji domeny**
 
-9.2 Usuwanie certyfikatu
+### 9.2 Usuwanie certyfikatu
 
 Usuwanie certyfikatu jest proste.
 
