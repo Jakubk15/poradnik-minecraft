@@ -239,9 +239,13 @@ Dajemy teraz Velocity czas na przygotowanie wszystkich plików, następnie wył�
 Jeżeli wolisz bardziej rozwiniętą dokumentację, zapraszam do [oficjalnej dokumentacji Velocity](https://velocitypowered.com/wiki/).
 
 `bind` - Możesz tutaj zmienić port swojego serwera proxy.
+
 `online-mode`- Tryb online, zabezpieczenie Mojanga. Gdy ta opcja jest ustawiona na true, na serwer dołączać mogą jedynie osoby, które legalnie pozyskały grę.
+
 `player-info-forwarding-mode` - Tryb przekazywania informacji z serwera proxy do serwerów Minecraft. Ustaw na "MODERN" jeśli chcesz uniknąć włamań.
+
 `forwarding-secret` - Hasło do wpisania w paper.yml.
+
 `[servers]` - Tutaj możesz dodać swoje serwery.
 
 
