@@ -16,7 +16,7 @@ Playlista z tworzenia serwerów PLUS: https://www.youtube.com/playlist?list=PL_B
 
 #### 1.1 Instalacja silnika gry oraz organizacja miejsca.
 
-Większość hostingów preinstaluje silniki, jednak może nadejść moment, gdy musisz wgrać własny. I co wtedy?
+Na współdzielonych hostingach serwerów Minecraft wszystko masz gotowe do gry, jednak na vpsie musisz wszystko przygotowaf sam. I co wtedy?
 
 
 Musimy stworzyć miejsce w którym będzie znajdował się nasz serwer MC. Wpisujemy komendy:
@@ -28,7 +28,7 @@ Musimy stworzyć miejsce w którym będzie znajdował się nasz serwer MC. Wpisu
 oraz
 
 
-`mkdir <nazwa_folderu>`
+`mkdir mc`
 
 
 
