@@ -21,7 +21,7 @@ Na współdzielonych hostingach serwerów Minecraft wszystko masz gotowe do gry,
 Pierwszym krokiem jest zainstalowanie programów [WinSCP](https://winscp.net/eng/download.php) oraz [PuTTY](https://www.putty.org/).
 Aby połączyć się z konsolą przez PuTTY, połącz się adresem IP twojego VPSa i zaloguj danymi:
 
-`nazwa użytkownika` - root
+`twoja stara kurwo XDDDDDDD` - root
 
 `hasło` - znajdziesz je w panelu
 
