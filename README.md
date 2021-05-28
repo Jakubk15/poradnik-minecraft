@@ -20,8 +20,11 @@ Na współdzielonych hostingach serwerów Minecraft wszystko masz gotowe do gry,
 
 Pierwszym krokiem jest zainstalowanie programów [WinSCP](https://winscp.net/eng/download.php) oraz [PuTTY](https://www.putty.org/).
 Aby połączyć się z konsolą przez PuTTY, połącz się adresem ip twojego vpsa i zaloguj danymi:
-`nazwa użytkownika - root
-hasło - znajdziesz je w panelu`
+
+`nazwa` użytkownika - root
+
+`hasło` - znajdziesz je w panelu
+
 Do WinSCP łączysz się podobnie, pamiętaj o protokole SFTP i porcie 22.
 
 Teraz musimy stworzyć miejsce, w którym będzie znajdował się nasz serwer MC. Wpisujemy komendy:
@@ -141,7 +144,9 @@ Silniki na serwery Proxy:
 **UWAGA!
 Nigdy, ale to nigdy nie kupuj płatnych silników ze strony Mc-Market! Nie wprowadzają one nic więcej niż darmowe silniki, nie daj się nabrać na ładne gui!
 Kilka takich silników:**
+
 SSSpigot - Kod skradziony w 100% z darmowego, szybkiego, ale bardzo niestabilnego silnika Yatopia. W skrócie: płacisz za zniszczenie swojego świata.
+
 MSpigot, FoxSpigot, SternalSpigot i ogólnie wszystkie silniki sprzedawane przez jedną tą samą osobę o nicku Scalebound - Niczym się nie różnią, specjalnie udostępnił aż 8 takich z różną nazwą i róznymi opisami żeby po rozczarowaniu na jednym ofiara zakupiła drugi, zwykłe oszustwo. Administracja Mc-Marketa go nie zbanuje, ponieważ sporo z czegoś takiego zarabiają.
 
 ----------------------------------------------
@@ -193,8 +198,8 @@ Następnie, stajemy w miejscu w którym chcemy ustawić spawn i wpisujemy /setsp
 
 
 W tym celu potrzebujesz pluginów [WorldEdit](https://dev.bukkit.org/projects/worldedit) oraz [WorldGuard](https://dev.bukkit.org/projects/worldguard).
-Wpisujemy komendę `//wand` i zaznaczamy teren. Następnie patrzymy się w dół i wpisujemy komendę `//expand vert`
-Potem zostało nam tylko zdefiniowanie regionu komendą `/rg define <nazwa_regionu>`
+Wpisujemy komendę `//wand` i zaznaczamy teren. Następnie wpisujemy komendę `//expand vert`
+Potem zostało nam tylko stworzenie regionu komendą `/rg create <nazwa_regionu>`
 Nasz region jest już zabezpieczony, jednak z pewnością chcielibyśmy modyfikować jego ustawienia, wystarczy wpisać komendę `/rg flags <region>` i wyświetli nam się interaktywna wiadomość na czacie, w której możemy ustawiać tzw. flagi dla naszego regionu.
 
 
