@@ -14,18 +14,22 @@ Playlista z tworzenia serwerów PLUS: https://www.youtube.com/playlist?list=PL_B
 
 
 
-#### 1.1 Instalacja serwera Minecraft na vps.
+#### 1.1 Instalacja serwera Minecraft na VPS.
 
-Na współdzielonych hostingach serwerów Minecraft wszystko masz gotowe do gry, jednak na vpsie musisz wszystko przygotować sam. I co wtedy?
+Na współdzielonych hostingach serwerów Minecraft wszystko masz gotowe do gry, jednak na serwerze VPS musisz wszystko przygotować sam. I co wtedy?
 
 Pierwszym krokiem jest zainstalowanie programów [WinSCP](https://winscp.net/eng/download.php) oraz [PuTTY](https://www.putty.org/).
-Aby połączyć się z konsolą przez PuTTY, połącz się adresem ip twojego vpsa i zaloguj danymi:
+Aby połączyć się z konsolą przez PuTTY, połącz się adresem IP twojego VPSa i zaloguj danymi:
 
 `nazwa użytkownika` - root
 
 `hasło` - znajdziesz je w panelu
 
 Do WinSCP łączysz się podobnie, pamiętaj o protokole SFTP i porcie 22.
+
+W przypadku macOS zalecamy program [FileZilla](https://filezilla-project.org) do połączeń FTP, oraz wbudowanego klienta SSH do łączenia się z serwerem VPS.
+
+Aby połączyć się wystarczy wpisać komendę `ssh root@<IP_TWOJEGO_VPS>`, następnie system poprosi nas o hasło.
 
 Teraz musimy stworzyć miejsce, w którym będzie znajdował się nasz serwer MC. Wpisujemy komendy:
 
