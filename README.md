@@ -93,7 +93,7 @@ W razie dodatkowych pytań skontaktuj się z supportem.
 ### 2. Optymalizacja
 
 Support Team zaleca zapoznanie się z tym poradnikiem odnośnie optymalizacji:
-*https://github.com/YouHaveTrouble/minecraft-optimization*
+*https://github.com/Helios3991/minecraft-optimization*
 
 
 ### 3. Zabezpieczenia:
