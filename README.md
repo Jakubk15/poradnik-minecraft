@@ -104,6 +104,8 @@ Support Team zaleca zapoznanie się z tym poradnikiem odnośnie optymalizacji:
 
 Jeśli korzystasz ze starszej wersji, zainteresuj się pluginem [ExploitFixer](https://www.spigotmc.org/resources/2ls-exploitfixer-the-ultimate-antiexploit-plugin.62842/).
 
+Z płatnych AntiCrash polecamy SafeMC.
+
 
 #### 3.2 Ochrona Anti-Bot
 
@@ -119,6 +121,8 @@ Support Team zaleca następujące zabezpieczenia Anti-Bot:
 
 [BotSentry](https://www.spigotmc.org/resources/%E2%9A%A1-botsentry-%E2%9A%A1-the-only-antibot-resisting-30k-bots-per-second-bungee-spigot-sponge-velocity.55924/) (Kompatybilny z bukkitem, bungeecordem i velocity. Bardzo intuicyjny, z zaawansowanym podglądem na ataki i zarządzaniem. Najwydajniejsze zabezpieczenie przed botami.)
 
+
+Z płatnych AntiBotów polecamy silnik proxy EyfenCord.
 
 
 ### 4. Wybór silników i ich cechy.
@@ -298,3 +302,58 @@ Usuwanie certyfikatu jest proste.
 Wpisujemy komendę `certbot revoke --cert-name example.com`
 
 Aby przywrócić certyfikat ponownie, po prostu uruchamiamy CertBota ponownie.
+
+
+
+
+
+### 10. Instalacja bazy danych + PHP + PHPmyAdmin + Apache2
+
+Na początku zainstalujmy dodatki:
+
+`apt install zip sudo nano wget software-properties-common`
+`apt install zip sudo nano wget lsb-release apt-transport-https ca-certificates`
+
+### 10.1 Apache2
+
+Aby zainstalować Apache2, wystarczy wpisać komendy: 
+
+`apt install apache2`
+`apt update`
+
+
+### 10.2 Instalacja MariaDB (szybszy MYSQL)
+
+MariaDB to szybszy MySQL z pełną kompatybilnością. Aby go zainstalować, wpisujemy:
+
+`apt install mariadb-server`
+
+Aby przejść do dalszej instalacji, wpisujemy:
+
+`mysql_secure_installation`
+
+
+1. Klikamy Enter
+2. Klikamy Y i Enter
+3. Wpisujemy nasze hasło do bazy danych
+4. Potwierdzamy nasze hasło do MariaDB wpisując dokładnie to samo co poprzednio.
+5. Klikamy Y i Enter
+6. Klikamy Y i Enter
+7. Klikamy Y i Enter
+8. Klikamy Y i Enter
+
+
+Tworzenie użytkownika:
+
+Aby stworzyć użytkownika wpisujemy:
+
+`sudo mysql` - Otwieramy konsolę MariaDB
+
+`CREATE USER 'nazwa_użytkownika'@'%' IDENTIFIED BY 'hasło';`
+`GRANT ALL PRIVILEGES ON * . * TO 'nazwa_użytkownika'@'%';`
+I spłukujemy permisje komendą:
+`FLUSH PRIVILEGES;`
+oraz wychodzimy z konsoli - `quit`
+
+UWAGA! TA SEKCJA JEST NIEDOKOŃCZONA
+
