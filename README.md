@@ -334,12 +334,19 @@ Aby przejść do dalszej instalacji, wpisujemy:
 
 
 1. Klikamy Enter
+
 2. Klikamy Y i Enter
+
 3. Wpisujemy nasze hasło do bazy danych
+
 4. Potwierdzamy nasze hasło do MariaDB wpisując dokładnie to samo co poprzednio.
+
 5. Klikamy Y i Enter
+
 6. Klikamy Y i Enter
+
 7. Klikamy Y i Enter
+
 8. Klikamy Y i Enter
 
 
@@ -347,13 +354,57 @@ Tworzenie użytkownika:
 
 Aby stworzyć użytkownika wpisujemy:
 
+
 `sudo mysql` - Otwieramy konsolę MariaDB
 
+
+
 `CREATE USER 'nazwa_użytkownika'@'%' IDENTIFIED BY 'hasło';`
+
+
 `GRANT ALL PRIVILEGES ON * . * TO 'nazwa_użytkownika'@'%';`
+
+
 I spłukujemy permisje komendą:
+
+
 `FLUSH PRIVILEGES;`
+
+
 oraz wychodzimy z konsoli - `quit`
 
-UWAGA! TA SEKCJA JEST NIEDOKOŃCZONA
+Teraz wpisujemy komendę:
 
+`sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf`
+
+W linijce `bind-address`, przed nią dajemy znak `#`.
+
+Teraz zapisujemy; CTRL+X i 2x ENTER.
+
+I restartujemy MariaDB.
+
+`sudo systemctl restart mariadb`
+
+
+### 10.3 PHP
+
+Aby zainstalować repozytoria PHP, wpisujemy te komendy:
+
+```
+Dla ubuntu
+LC_ALL=C.UTF-8 sudo add-apt-repository ppa:ondrej/php
+
+Dla Debiana: 
+sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
+```
+
+I dodatkowo:
+
+`apt install php7.4 php7.4-cli php7.4-common libapache2-mod-php7.4 php7.4-mysql php7.4-mysql php7.4-dom php7.4-simplexml php7.4-ssh2 php7.4-xml php7.4-xmlreader php7.4-curl php7.4-exif php7.4-ftp php7.4-gd php7.4-iconv php7.4-imagick php7.4-json php7.4-mbstring php7.4-posix php7.4-sockets php7.4-tokenizer php7.4-pdo php7.4-bcmath php7.4-fpm php7.4-zip`
+
+`apt update`
+
+Teraz sprawdzamy czy mamy wersję PHP 7.4: `php -v`
+
+Jeżeli tak, to baza danych już działa.
