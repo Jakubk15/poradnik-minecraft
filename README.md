@@ -159,9 +159,6 @@ Support Team, w celu uzyskania najlepszej wydajności oraz bezpieczeństwa serwe
 
 [SportPaper](https://github.com/Electroid/SportPaper) - Fork Papera na wersję 1.8.8 zwiększający wydajność i naprawiający niektóre błędy. (rekomendowany na wersję 1.8.8) 
 
-> Z płatnych wyróżniamy:
-
-[ImanitySpigot](https://www.mc-market.org/resources/10770/)
 
 > Silniki na serwery Proxy:
 [Waterfall](https://papermc.io/downloads#Waterfall) - Ulepszony fork Bungeecorda pod wieloma względami
