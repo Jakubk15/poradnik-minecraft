@@ -1,92 +1,110 @@
-# Poradnik Minecraft
-
-
-Poniżej znajduje się dokumentacja przeznaczona na [Discord z Tworzenia Serwerów.](https://discord.gg/RXkXWh6p4K)
-
-Playlista z tworzenia serwerów: https://www.youtube.com/playlist?list=PL_BBuK-pXvpXsYuKQg3JMghpAHg2td5WL
-
-
-
-Playlista z tworzenia serwerów PLUS: https://www.youtube.com/playlist?list=PL_BBuK-pXvpUzafMeyIOwj1ppaHY3LkQZ
-
-
 ### 1. Podstawy
 
 
 
-#### 1.1 Instalacja serwera Minecraft na VPS.
+### 1.1 Instalacja serwera Minecraft na VPS.
 
-Na współdzielonych hostingach serwerów Minecraft wszystko masz gotowe do gry, jednak na serwerze VPS musisz wszystko przygotować sam. I co wtedy?
+> Na współdzielonych hostingach serwerów Minecraft wszystko masz gotowe do gry, jednak na serwerze VPS lub DEDYKU musisz wszystko przygotować sam. I co wtedy?
 
-Pierwszym krokiem jest zainstalowanie programów [WinSCP](https://winscp.net/eng/download.php) oraz [PuTTY](https://www.putty.org/).
-Aby połączyć się z konsolą przez PuTTY, połącz się adresem IP twojego VPSa i zaloguj danymi:
+> Pierwszym krokiem jest zainstalowanie programów [WinSCP](https://winscp.net/eng/download.php) lub [Bitvise](https://www.bitvise.com/download-arealub) oraz [PuTTY](https://www.putty.org/).
 
-`nazwa użytkownika` - root
+> Następnie aby połączyć się z konsolą przez PuTTY, połącz się adresem IP twojego VPSa i zaloguj danymi:
 
-`hasło` - znajdziesz je w panelu
+ - `Nazwa użytkownika` - zazwyczaj root
+ - `hasło` - znajdziesz je w panelu lub na skrzynce mailowej (zależnie od dostawcy VPS)
 
-Do WinSCP łączysz się podobnie, pamiętaj o protokole SFTP i porcie 22.
+> Do WinSCP łączysz się podobnie, pamiętaj o protokole SFTP i porcie 22 przykład znajdziesz poniżej
+> 
+> <img src = "https://i.imgur.com/zOOoVMt.png">
 
-W przypadku macOS zalecamy program [FileZilla](https://filezilla-project.org) do połączeń FTP, oraz wbudowanego klienta SSH do łączenia się z serwerem VPS.
-
-Aby połączyć się wystarczy wpisać komendę `ssh root@<IP_TWOJEGO_VPS>`, następnie system poprosi nas o hasło.
-
-Teraz musimy stworzyć miejsce, w którym będzie znajdował się nasz serwer MC. Wpisujemy komendy:
-
-
-`cd /home/`
+> W przypadku macOS zalecamy program [FileZilla](https://filezilla-project.org) do połączeń FTP, oraz wbudowanego klienta SSH do łączenia się z serwerem VPS.
+> Aby połączyć się wystarczy wpisać komendę `ssh root@<IP_TWOJEGO_VPS>`, następnie system poprosi nas o hasło.
 
 
-oraz
+> Następnie musimy stworzyć miejsce, w którym będzie znajdował się nasz serwer MC. Wpisujemy komendy:
 
 
-`mkdir mc`
-
-
-
-
-Aby zainstalować silnik, najpierw należy go pobrać.
-Dla przykładu [Paper](https://papermc.io), pobieramy go ze strony https://papermc.io/downloads. Zainstalowany silnik wrzuć do folderu `home/mc`.
-
-
-Zmieniamy nazwę silnika serwera na jakąś prostą, pamiętajmy jednak, że musimy zachować format .jar, np. server.jar
-Musimy najpierw zainstalować Javę oraz aplikację `screen`. Jeżeli już ją masz pomiń ten krok.
-Wpisujemy komendy:
-
-`apt-get install openjdk-11-jre-headless`
-
-
-`apt-get install screen`
-
-
-`java -version`
-
-
-Jeżeli wyświetli nam się komunikat informujący o obecności Javy, to już prawie gotowe.
-Musimy teraz stworzyć plik uruchamiający serwer. W przypadku Linuxa będzie to start.sh.
-Wrzucamy go do folderu `home/mc` oraz wpisujemy tam następujący kod:
-
-```
-screen -dmS mc java -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar server.jar nogui
+```linux
+cd /home
+mkdir mc 
 ```
 
+> Aby zainstalować silnik, najpierw należy go pobrać.
+> Dla przykładu paper, pobieramy go ze strony [PaperMC](https://papermc.io/downloads). Zainstalowany silnik wrzuć do folderu `home/mc`.
 
-UWAGA! Wartość `10G` to liczba twojego RAMU serwera! Np. jeżeli chcesz przydzielić 4GB ram, wpisujesz `4G`.
 
+> Zmieniamy nazwę silnika serwera na jakąś prostą, pamiętajmy jednak, że musimy zachować format .jar, np. server.jar
+> Musimy najpierw zainstalować Javę oraz aplikację `screen`. Jeżeli już ją masz pomiń ten krok.
+
+Aby to zrobić użyj następujących komend
+
+#### Dla Javy 8
+```linux
+sudo apt-get install openjdk-8-jdk -y
+```
+
+#### Dla Javy 11
+```linux
+sudo apt-get install openjdk-11-jdk -y
+```
+
+####  Dla Javy 16
+```linux
+sudo add-apt-repository ppa:linuxuprising/java -y
+sudo apt update
+sudo apt-get install oracle-java16-installer
+```
+
+#### Dla Javy 17
+```linux
+sudo add-apt-repository ppa:linuxuprising/java -y
+sudo apt update
+sudo apt-get install oracle-java16-installer
+```
+
+#### Następnie sprawdzamy wersje Javy
+```linux
+java -version
+```
+
+#### Jeżeli wersja javy nam nie odpowiada możemy ją ustawić pod komendą 
+```linux 
+sudo update-alternatives --config java
+```
+
+#### Oraz instalujemy screena
+```linux
+sudo apt-get install screen -y
+```
+- ### Przykładowa ścieżka screena ```screen -S NAZWA java -Xmx2048m -jar silnik.jar```
+
+> Jeżeli wyświetli nam się komunikat informujący o obecności Javy, to już prawie gotowe.
+> Musimy teraz stworzyć plik uruchamiający serwer. W przypadku Linuxa będzie to start.sh.
+> Wrzucamy go do folderu `home/mc` oraz wpisujemy tam następujący kod: **(Są to tylko przykładowe flagi zaczęrpnięte z strony [mcflags](https://mcflags.emc.gs/))**
+
+```
+screen -S mc java -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar server.jar nogui -o false
+```
+
+**UWAGA!** Wartość `10G` to liczba twojego RAMU serwera! Np. jeżeli chcesz przydzielić 4GB ram, wpisujesz `4G`.
 
 Teraz wpisujemy komendę:
-`chmod +x start.sh`
+```linux
+chmod +x start.sh
+```
 
 #### 1.2 Uruchamianie serwera.
 
 W tym celu wpisujemy komendę:
-
-`./start.sh`
+```linux
+sh start.sh
+```
 
 Teraz powinna nam się ukazać konsola serwera. Jeżeli to nie nastąpi, wpisujemy `screen -ls`. Teraz wyświetli nam się lista naszych screenów wraz z ich nazwami. Następnie wpisujemy:
 
-`screen -r`
-
+```linux
+screen -d -r NAZWA
+```
 
 W razie dodatkowych pytań skontaktuj się z supportem.
 
@@ -100,29 +118,29 @@ Support Team zaleca zapoznanie się z tym poradnikiem odnośnie optymalizacji:
 
 #### 3.1 Ochrona Anti-Crash
 
-**UWAGA! Jeżeli masz serwer na najnowszej wersji, to nie będziesz potrzebował zabezpieczenia typu Anti-Crash. Paper naprawia wszystkie znane błędy pozwalające crashować serwer, a każdy nowy naprawia w chwilę.**
+**UWAGA! Jeżeli masz serwer na najnowszej wersji, to nie będziesz potrzebował zabezpieczenia typu Anti-Crash. Paper naprawia w większości znane błędy pozwalające crashować serwer, a każdy nowy naprawia w chwilę.**
 
-Jeśli korzystasz ze starszej wersji, zainteresuj się pluginem [ExploitFixer](https://www.spigotmc.org/resources/2ls-exploitfixer-the-ultimate-antiexploit-plugin.62842/).
-
-Z płatnych AntiCrash polecamy SafeMC.
+> Jeśli korzystasz ze starszej wersji, zainteresuj się pluginem [ExploitFixer](https://www.spigotmc.org/resources/2ls-exploitfixer-the-ultimate-antiexploit-plugin.62842/).
+> Z płatnych AntiCrash polecamy SafeMC który można zakupić na [discordzie](https://discord.gg/vSxAYAtzqv)
 
 
 #### 3.2 Ochrona Anti-Bot
 
-Support Team zaleca następujące zabezpieczenia Anti-Bot:
+> Support Team zaleca następujące zabezpieczenia Anti-Bot:
 
 **DARMOWE:**
 
 [2LS AntiBot](https://www.spigotmc.org/resources/2ls-antibot-the-ultimate-antibot-plugin.62847/) (Kompatybilny tylko z bungeecordem)
 
-[EpicGuard](https://www.spigotmc.org/resources/%E2%AD%90-epicguard-protect-your-server-from-bots-more-%E2%AD%90.72369/) (Kompatybilny z bukkitem, bungeecordem i velocity, lecz mniej wydajny niż 2ls AntiBot)
+[EpicGuard](https://www.spigotmc.org/resources/%E2%AD%90-epicguard-protect-your-server-from-bots-more-%E2%AD%90.72369/) (Kompatybilny z bukkitem, bungeecordem i velocity, lecz blokuje o wiele gorzej niż 2ls AntiBot)
+
+[nAntiBot](https://www.nickuc.com/en/details/nantibot) (Kompatybilny z bungeecordem i velocity)
 
 **PŁATNE:**
 
-[BotSentry](https://www.spigotmc.org/resources/%E2%9A%A1-botsentry-%E2%9A%A1-the-only-antibot-resisting-30k-bots-per-second-bungee-spigot-sponge-velocity.55924/) (Kompatybilny z bukkitem, bungeecordem i velocity. Bardzo intuicyjny, z zaawansowanym podglądem na ataki i zarządzaniem. Najwydajniejsze zabezpieczenie przed botami.)
+[BotSentry](https://www.spigotmc.org/resources/%E2%9A%A1-botsentry-%E2%9A%A1-the-only-antibot-resisting-30k-bots-per-second-bungee-spigot-sponge-velocity.55924/) (Kompatybilny z bukkitem, bungeecordem i velocity. Bardzo intuicyjny, z zaawansowanym podglądem na ataki i zarządzaniem)
 
-
-Z płatnych AntiBotów polecamy silnik proxy EyfenCord.
+> Z płatnych AntiBotów polecamy silnik proxy EyfenCord który można zakupić na ich [discordzie](https://discord.gg/d2r9NhwuMf)
 
 
 ### 4. Wybór silników i ich cechy.
@@ -131,23 +149,29 @@ Z płatnych AntiBotów polecamy silnik proxy EyfenCord.
 
 Support Team, w celu uzyskania najlepszej wydajności oraz bezpieczeństwa serwera, zaleca użycie następujących silników:
 
-Silniki na serwery główne:
+> Silniki na serwery główne:
 
 [PaperMC](https://papermc.io/downloads) - Fork Spigota w celu poprawienia bezpieczeństwa oraz wydajności. (rekomendowany na wersje 1.9-1.14.x)
 
-[Tuinity](https://github.com/Spottedleaf/Tuinity) - Fork Papera w celu uzyskania lepszej wydajności. (rekomendowany na wersje 1.15-1.16.x)
+[Airplane](https://dl.airplane.gg) - Fork Papera w celu uzyskania jeszcze lepszej wydajności. (rekomendowany na wersję 1.16.x)
 
-[Airplane](https://dl.airplane.gg) - Fork Tuinity w celu uzyskania jeszcze lepszej wydajności. (rekomendowany na wersję 1.16.x)
-
-**[Purpur](https://purpur.pl3x.net) - Fork Airplane (a dokładniej fork Papera z patchami Tuinity oraz Airplane'a) mający na celu umożliwieniu administratorom serwera swobodnej i prostej konfiguracji.** (rekomendowany na wersje 1.15-1.16.x)
+[Purpur](https://purpur.pl3x.net) - Fork Airplane (a dokładniej fork Papera z patchami Airplane'a) mający na celu umożliwieniu administratorom serwera swobodnej i prostej konfiguracji (rekomendowany na wersje 1.15-1.16.x)
 
 [SportPaper](https://github.com/Electroid/SportPaper) - Fork Papera na wersję 1.8.8 zwiększający wydajność i naprawiający niektóre błędy. (rekomendowany na wersję 1.8.8) 
 
-Silniki na serwery Proxy:
+> Z płatnych wyróżniamy:
+
+[ImanitySpigot](https://www.mc-market.org/resources/10770/)
+
+> Silniki na serwery Proxy:
 [Waterfall](https://papermc.io/downloads#Waterfall) - Ulepszony fork Bungeecorda pod wieloma względami
 
-
 [Velocity](https://velocitypowered.com) - Oddzielny silnik proxy stworzony przez twórcę waterfalla, dwukrotnie od waterfalla wydajniejszy i dużo bezpieczniejszy.
+
+> Z płatnych silników proxy polecamy:
+
+[EyfenCord](https://discord.gg/d2r9NhwuMf)
+
 
 **UWAGA!
 Nigdy, ale to nigdy nie kupuj płatnych silników ze strony Mc-Market! Nie wprowadzają one nic więcej niż darmowe silniki, nie daj się nabrać na ładne gui!
@@ -155,12 +179,7 @@ Kilka takich silników:**
 
 SSSpigot - Kod skradziony w 100% z darmowego, szybkiego, ale bardzo niestabilnego silnika Yatopia. W skrócie: płacisz za zniszczenie swojego świata.
 
-MSpigot, FoxSpigot, SternalSpigot i ogólnie wszystkie silniki sprzedawane przez jedną tą samą osobę o nicku Scalebound - Niczym się nie różnią, specjalnie udostępnił aż 8 takich z różną nazwą i róznymi opisami żeby po rozczarowaniu na jednym ofiara zakupiła drugi, zwykłe oszustwo. Administracja Mc-Marketa go nie zbanuje, ponieważ sporo z czegoś takiego zarabiają.
-
-----------------------------------------------
-
-
-
+MSpigot, FoxSpigot, SternalSpigot i ogólnie wszystkie silniki sprzedawane przez jedną tą samą osobę o nicku Scalebound - Niczym się nie różnią, specjalnie udostępnił aż 8 takich z różną nazwą i róznymi opisami żeby po rozczarowaniu na jednym ofiara zakupiła drugi, zwykłe oszustwo. 
 
 ### 5. Konfiguracja Chatu, prefixów.
 
@@ -169,13 +188,6 @@ Aby zmienić format chatu, musimy wejść w config.yml EssentialsX i poszukać s
 zmienić wygląd czatu. Pamiętajmy, aby stworzyć grupę oraz nadać ją sobie w celu sprawdzenia!
 `(/lp creategroup <ranga> <waga>, /lp user <nick> parent set <ranga>), /lp group <ranga> meta setprefix "<prefix> "`
 W razie dodatkowych pytań skontaktuj się z Support Teamem. 
-
-
-
-
-----------------------------------------------
-
-
 
 ### 6. Uprawnienia.
 
@@ -186,15 +198,6 @@ Aby dodać/usunąć uprawnienie dla danej rangi, należy użyć następujących 
 `/lp group <ranga> permission unset <uprawnienie>` (usuwanie)
 
 Więcej informacji o pluginie LuckPerms znajdziecie pod: https://luckperms.net/wiki/Home
-
-
-
-
-
-----------------------------------------------
-
-
-
 
 ### 7. Spawn
 
