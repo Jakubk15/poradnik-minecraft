@@ -132,7 +132,7 @@ Support Team zaleca zapoznanie się z tym poradnikiem odnośnie optymalizacji:
 
 [2LS AntiBot](https://www.spigotmc.org/resources/2ls-antibot-the-ultimate-antibot-plugin.62847/) (Kompatybilny tylko z bungeecordem)
 
-[EpicGuard](https://www.spigotmc.org/resources/%E2%AD%90-epicguard-protect-your-server-from-bots-more-%E2%AD%90.72369/) (Kompatybilny z bukkitem, bungeecordem i velocity, lecz blokuje o wiele gorzej niż 2ls AntiBot)
+[EpicGuard](https://www.spigotmc.org/resources/%E2%AD%90-epicguard-protect-your-server-from-bots-more-%E2%AD%90.72369/) (Kompatybilny z bukkitem, bungeecordem i velocity)
 
 [nAntiBot](https://www.nickuc.com/en/details/nantibot) (Kompatybilny z bungeecordem i velocity)
 
@@ -169,14 +169,6 @@ Support Team, w celu uzyskania najlepszej wydajności oraz bezpieczeństwa serwe
 
 [EyfenCord](https://discord.gg/d2r9NhwuMf)
 
-
-**UWAGA!
-Nigdy, ale to nigdy nie kupuj płatnych silników ze strony Mc-Market! Nie wprowadzają one nic więcej niż darmowe silniki, nie daj się nabrać na ładne gui!
-Kilka takich silników:**
-
-SSSpigot - Kod skradziony w 100% z darmowego, szybkiego, ale bardzo niestabilnego silnika Yatopia. W skrócie: płacisz za zniszczenie swojego świata.
-
-MSpigot, FoxSpigot, SternalSpigot i ogólnie wszystkie silniki sprzedawane przez jedną tą samą osobę o nicku Scalebound - Niczym się nie różnią, specjalnie udostępnił aż 8 takich z różną nazwą i róznymi opisami żeby po rozczarowaniu na jednym ofiara zakupiła drugi, zwykłe oszustwo. 
 
 ### 5. Konfiguracja Chatu, prefixów.
 
